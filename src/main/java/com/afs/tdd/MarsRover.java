@@ -42,10 +42,10 @@ public class MarsRover {
         if (command.equals(MOVE_FORWARD)){
             move();
         }
-        if (command.equals(TURN_LEFT)){
+        else if (command.equals(TURN_LEFT)){
             goLeft();
         }
-        if (command.equals(TURN_RIGHT)){
+        else if (command.equals(TURN_RIGHT)){
             goRight();
         }
     }
@@ -54,13 +54,13 @@ public class MarsRover {
         if (direction.equals(NORTH)){
             direction = EAST;
         }
-        if (direction.equals(SOUTH)){
+        else if (direction.equals(SOUTH)){
             direction = WEST;
         }
-        if (direction.equals(EAST)){
+        else if (direction.equals(EAST)){
             direction = SOUTH;
         }
-        if (direction.equals(WEST)){
+        else if (direction.equals(WEST)){
             direction = NORTH;
         }
     }
@@ -69,29 +69,29 @@ public class MarsRover {
         if (direction.equals(NORTH)){
             direction = WEST;
         }
-        if (direction.equals(SOUTH)){
+        else if (direction.equals(SOUTH)){
             direction = EAST;
         }
-        if (direction.equals(EAST)){
+        else if (direction.equals(EAST)){
             direction = NORTH;
         }
-        if (direction.equals(WEST)){
+        else if (direction.equals(WEST)){
             direction = SOUTH;
         }
     }
 
     private void move() {
         if (direction.equals(NORTH)){
-            this.locationY++;
+            locationY++;
         }
-        if (direction.equals(SOUTH)){
-            this.locationY--;
+        else if (direction.equals(SOUTH)){
+            locationY--;
         }
-        if (direction.equals(EAST)){
-            this.locationX++;
+        else if (direction.equals(EAST)){
+            locationX++;
         }
-        if (direction.equals(WEST)){
-            this.locationX--;
+        else if (direction.equals(WEST)){
+            locationX--;
         }
     }
 
