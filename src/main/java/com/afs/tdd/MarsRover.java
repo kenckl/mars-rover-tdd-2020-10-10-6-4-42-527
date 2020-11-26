@@ -41,7 +41,7 @@ public class MarsRover {
     private void executeCommand(String command) {
         if (command.equals(MOVE_FORWARD)){
             move();
-            }
+        }
         if (command.equals(TURN_LEFT)){
             goLeft();
         }
@@ -53,6 +53,9 @@ public class MarsRover {
     private void goRight() {
         if (direction.equals(NORTH)){
             direction = EAST;
+        }
+        if (direction.equals(SOUTH)){
+            direction = WEST;
         }
     }
 
