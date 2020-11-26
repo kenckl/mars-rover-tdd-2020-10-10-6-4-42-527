@@ -57,6 +57,9 @@ public class MarsRover {
         if (direction.equals(SOUTH)){
             direction = WEST;
         }
+        if (direction.equals(EAST)){
+            direction = SOUTH;
+        }
     }
 
     private void goLeft(){

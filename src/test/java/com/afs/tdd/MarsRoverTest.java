@@ -76,6 +76,7 @@ class MarsRoverTest {
         assertEquals(0, marsRover.getLocationX());
         assertEquals(0, marsRover.getLocationY());
         assertEquals("E", marsRover.getDirection());
+
     }
 
     @Test
