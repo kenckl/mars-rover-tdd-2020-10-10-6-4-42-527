@@ -34,6 +34,15 @@ public class MarsRover {
         if (command == "M"){
             move();
         }
+        if (command == "L"){
+            goLeft();
+        }
+    }
+
+    private void goLeft() {
+        if (direction.equals("N")){
+            direction = "W";
+        }
     }
 
     private void move() {
