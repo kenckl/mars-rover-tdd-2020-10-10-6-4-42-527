@@ -58,13 +58,16 @@ public class MarsRover {
 
     private void goLeft(){
         if (direction.equals(NORTH)){
-            direction = EAST;
+            direction = WEST;
         }
     }
 
     private void move() {
         if (direction.equals(NORTH)){
             this.locationY++;
+        }
+        if (direction.equals(SOUTH)){
+            this.locationY--;
         }
     }
 
