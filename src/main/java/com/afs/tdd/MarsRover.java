@@ -31,11 +31,20 @@ public class MarsRover {
     }
 
     private void executeCommand(String command) {
-        if (command == "M"){
+        if (command.equals("M")){
             move();
             }
-        if (command == "L"){
+        if (command.equals("L")){
             goLeft();
+        }
+        if (command.equals("R")){
+            goRight();
+        }
+    }
+
+    private void goRight() {
+        if (direction.equals("N")){
+            direction = "E";
         }
     }
 
