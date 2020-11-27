@@ -33,7 +33,7 @@ public class MarsRover {
         return direction;
     }
 
-    public void executeCommands(String commands){
+    public void processCommand(String commands){
         Arrays.asList(commands.split(""))
                 .forEach(command->this.executeCommand(command));
     }
