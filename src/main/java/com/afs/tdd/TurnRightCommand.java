@@ -9,6 +9,6 @@ public class TurnRightCommand implements Command {
 
     @Override
     public void execute(){
-        commandCenter.goLeft();
+        commandCenter.goRight();
     }
 }
