@@ -30,22 +30,6 @@ public class MarsRover implements CommandCenter {
         return direction;
     }
 
-//    public void processCommand(String commands) {
-//        Arrays.asList(commands.split(""))
-//                .forEach(command -> this.executeCommand(command));
-//    }
-//
-//
-//    private void executeCommand(String command) {
-//        if (command.equals(MOVE_FORWARD)) {
-//            move();
-//        } else if (command.equals(TURN_LEFT)) {
-//            goLeft();
-//        } else if (command.equals(TURN_RIGHT)) {
-//            goRight();
-//        }
-//    }
-
     @Override
     public void goRight() {
         switch(direction){

@@ -12,7 +12,9 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
-        marsRover.processCommand("M");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("M");
+
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -27,7 +29,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
-        marsRover.processCommand("L");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("L");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -42,7 +45,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
-        marsRover.processCommand("R");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("R");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -56,7 +60,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
-        marsRover.processCommand("M");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("M");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -70,7 +75,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
-        marsRover.processCommand("L");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("L");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -85,7 +91,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
-        marsRover.processCommand("R");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("R");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -99,7 +106,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
-        marsRover.processCommand("M");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("M");
 
         //then
         assertEquals(1, marsRover.getLocationX());
@@ -113,7 +121,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
-        marsRover.processCommand("L");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("L");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -127,7 +136,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
-        marsRover.processCommand("R");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("R");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -141,7 +151,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
-        marsRover.processCommand("M");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("M");
 
         //then
         assertEquals(-1, marsRover.getLocationX());
@@ -155,7 +166,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
-        marsRover.processCommand("L");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("L");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -169,7 +181,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
-        marsRover.processCommand("R");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("R");
 
         //then
         assertEquals(0, marsRover.getLocationX());
@@ -183,7 +196,8 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
-        marsRover.processCommand("MLMR");
+        CommandReceiver commandReceiver = new CommandReceiver(marsRover);
+        commandReceiver.executeCommands("MLMR");
 
         //then
         assertEquals(-1, marsRover.getLocationX());
