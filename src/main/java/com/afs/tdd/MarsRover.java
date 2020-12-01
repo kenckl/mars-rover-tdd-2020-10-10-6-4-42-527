@@ -2,7 +2,7 @@ package com.afs.tdd;
 
 import java.util.Arrays;
 
-public class MarsRover {
+public class MarsRover implements CommandCenter {
     // todo constant put in two seperate classes
     private static final String NORTH = "N";
     private static final String SOUTH = "S";
