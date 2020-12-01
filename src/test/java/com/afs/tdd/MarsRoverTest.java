@@ -9,7 +9,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_1_N_when_executeCommands_given_0_0_N_and_M() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
         marsRover.processCommand("M");
@@ -21,10 +21,10 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_return_0_0_W_when_executeCommands_given_0_0_N_and_L(){
+    public void should_return_0_0_W_when_executeCommands_given_0_0_N_and_L() {
 
         //given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
         marsRover.processCommand("L");
@@ -36,10 +36,10 @@ class MarsRoverTest {
     }
 
     @Test
-    public void should_return_0_0_E_when_executeCommands_given_0_0_N_and_R(){
+    public void should_return_0_0_E_when_executeCommands_given_0_0_N_and_R() {
 
         //given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
         marsRover.processCommand("R");
@@ -53,7 +53,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_minus1_S_when_executeCommands_given_0_0_S_and_M() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"S");
+        MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
         marsRover.processCommand("M");
@@ -67,7 +67,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_E_when_executeCommands_given_0_0_S_and_L() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"S");
+        MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
         marsRover.processCommand("L");
@@ -82,7 +82,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_W_when_executeCommands_given_0_0_S_and_R() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"S");
+        MarsRover marsRover = new MarsRover(0, 0, "S");
 
         //when
         marsRover.processCommand("R");
@@ -96,7 +96,7 @@ class MarsRoverTest {
     @Test
     public void should_return_1_0_E_when_executeCommands_given_0_0_E_and_M() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"E");
+        MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
         marsRover.processCommand("M");
@@ -110,7 +110,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_N_when_executeCommands_given_0_0_E_and_L() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"E");
+        MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
         marsRover.processCommand("L");
@@ -124,7 +124,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_S_when_executeCommands_given_0_0_E_and_R() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"E");
+        MarsRover marsRover = new MarsRover(0, 0, "E");
 
         //when
         marsRover.processCommand("R");
@@ -138,7 +138,7 @@ class MarsRoverTest {
     @Test
     public void should_return_minus1_0_W_when_executeCommands_given_0_0_W_and_M() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"W");
+        MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
         marsRover.processCommand("M");
@@ -152,7 +152,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_S_when_executeCommands_given_0_0_W_and_L() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"W");
+        MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
         marsRover.processCommand("L");
@@ -166,7 +166,7 @@ class MarsRoverTest {
     @Test
     public void should_return_0_0_N_when_executeCommands_given_0_0_W_and_R() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"W");
+        MarsRover marsRover = new MarsRover(0, 0, "W");
 
         //when
         marsRover.processCommand("R");
@@ -180,7 +180,7 @@ class MarsRoverTest {
     @Test
     public void should_return_minus1_1_N_when_executeCommands_given_0_0_N_and_MLMR() {
         //given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
 
         //when
         marsRover.processCommand("MLMR");
