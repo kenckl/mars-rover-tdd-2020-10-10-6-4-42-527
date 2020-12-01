@@ -3,14 +3,10 @@ package com.afs.tdd;
 import java.util.Arrays;
 
 public class MarsRover implements CommandCenter {
-    // todo constant put in two seperate classes
     private static final String NORTH = "N";
     private static final String SOUTH = "S";
     private static final String EAST = "E";
     private static final String WEST = "W";
-    private static final String MOVE_FORWARD = "M";
-    private static final String TURN_LEFT = "L";
-    private static final String TURN_RIGHT = "R";
 
     private int locationX;
     private int locationY;
@@ -34,56 +30,73 @@ public class MarsRover implements CommandCenter {
         return direction;
     }
 
-    public void processCommand(String commands) {
-        Arrays.asList(commands.split(""))
-                .forEach(command -> this.executeCommand(command));
-    }
+//    public void processCommand(String commands) {
+//        Arrays.asList(commands.split(""))
+//                .forEach(command -> this.executeCommand(command));
+//    }
+//
+//
+//    private void executeCommand(String command) {
+//        if (command.equals(MOVE_FORWARD)) {
+//            move();
+//        } else if (command.equals(TURN_LEFT)) {
+//            goLeft();
+//        } else if (command.equals(TURN_RIGHT)) {
+//            goRight();
+//        }
+//    }
 
-    //todo consider using switch
-    private void executeCommand(String command) {
-        if (command.equals(MOVE_FORWARD)) {
-            move();
-        } else if (command.equals(TURN_LEFT)) {
-            goLeft();
-        } else if (command.equals(TURN_RIGHT)) {
-            goRight();
+    @Override
+    public void goRight() {
+        switch(direction){
+            case NORTH:
+                direction = EAST;
+                break;
+            case SOUTH:
+                direction = WEST;
+                break;
+            case EAST:
+                direction = SOUTH;
+                break;
+            case WEST:
+                direction = NORTH;
+                break;
         }
     }
 
-    private void goRight() {
-        if (direction.equals(NORTH)) {
-            direction = EAST;
-        } else if (direction.equals(SOUTH)) {
-            direction = WEST;
-        } else if (direction.equals(EAST)) {
-            direction = SOUTH;
-        } else if (direction.equals(WEST)) {
-            direction = NORTH;
-        }
-    }
-
+    @Override
     public void goLeft() {
-        if (direction.equals(NORTH)) {
-            direction = WEST;
-        } else if (direction.equals(SOUTH)) {
-            direction = EAST;
-        } else if (direction.equals(EAST)) {
-            direction = NORTH;
-        } else if (direction.equals(WEST)) {
-            direction = SOUTH;
+        switch(direction){
+            case NORTH:
+                direction = WEST;
+                break;
+            case SOUTH:
+                direction = EAST;
+                break;
+            case EAST:
+                direction = NORTH;
+                break;
+            case WEST:
+                direction = SOUTH;
+                break;
         }
     }
 
+    @Override
     public void move() {
-        if (direction.equals(NORTH)) {
-            locationY++;
-        } else if (direction.equals(SOUTH)) {
-            locationY--;
-        } else if (direction.equals(EAST)) {
-            locationX++;
-        } else if (direction.equals(WEST)) {
-            locationX--;
+        switch(direction){
+            case NORTH:
+                locationY++;
+                break;
+            case SOUTH:
+                locationY--;
+                break;
+            case EAST:
+                locationX++;
+                break;
+            case WEST:
+                locationX--;
+                break;
         }
     }
-
 }
