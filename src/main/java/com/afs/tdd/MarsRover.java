@@ -74,7 +74,7 @@ public class MarsRover {
         }
     }
 
-    private void move() {
+    public void move() {
         if (direction.equals(NORTH)) {
             locationY++;
         } else if (direction.equals(SOUTH)) {
